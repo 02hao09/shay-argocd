@@ -9,4 +9,4 @@ spec:
     kind: Service
     name: blue-service
   port:
-    targetPort: 3003
+    targetPort: 3000
