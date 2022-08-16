@@ -5,7 +5,7 @@ metadata:
   labels:
     app: blue-nginx
     app.kubernetes.io/instance: blue-nginx
-  namespace: shay-test
+  namespace: project01
 spec:
   selector:
     matchLabels:
