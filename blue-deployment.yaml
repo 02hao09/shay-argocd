@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: blue-nginx
+  labels:
+    app: blue-nginx
+    app.kubernetes.io/instance: blue-nginx
+  namespace: shay-test
+spec:
+  selector:
+    matchLabels:
+      app: blue-nginx
+  replicas: 3
+  template:
+    metadata:
+      labels:
+         app: blue-nginx
+    spec:
+      containers:
+        - name: nginx
+          image: hcwxd/blue-whale
+          ports:
+            - name: http
+              containerPort: 80
+              protocol: TCP    
+
+          resources:
+            requests:
+              cpu: 200m
+              memory: 128Mi
+              
+            limits:
+              cpu: 200m
+              memory: 128Mi

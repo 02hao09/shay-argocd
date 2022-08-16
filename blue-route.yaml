@@ -1,0 +1,12 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: blue-nginx
+  namespace: shay-test
+spec:
+  host: blue-shay.apps.ocp.mic.com.tw
+  to:
+    kind: Service
+    name: blue-service
+  port:
+    targetPort: 3003
