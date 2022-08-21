@@ -2,7 +2,7 @@ apiVersion: route.openshift.io/v1
 kind: Route
 metadata:
   name: blue-nginx
-  namespace: project01
+  namespace: argocd
 spec:
   host: blue-shay.apps.ocp.mic.com.tw
   to:

@@ -5,7 +5,7 @@ metadata:
   labels:
     app: blue-nginx
     app.kubernetes.io/instance: blue-nginx
-  namespace: project01
+  namespace: argocd
 spec:
   selector:
     matchLabels:
